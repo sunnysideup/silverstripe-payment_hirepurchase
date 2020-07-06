@@ -36,3 +36,4 @@ class HirePurchasePayment extends EcommercePayment
         return null;
     }
 }
+
