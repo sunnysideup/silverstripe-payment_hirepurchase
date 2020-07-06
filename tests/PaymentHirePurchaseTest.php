@@ -1,4 +1,6 @@
 <?php
+
+use SilverStripe\Dev\SapphireTest;
 class PaymentHirePurchaseTest extends SapphireTest
 {
     protected $usesDatabase = false;

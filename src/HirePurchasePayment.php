@@ -2,12 +2,20 @@
 
 namespace Sunnysideup\PaymentHirePurchase;
 
-use EcommercePayment;
-use Config;
-use EcommercePaymentSuccess;
-use FieldList;
-use LiteralField;
-use HiddenField;
+
+
+
+
+
+
+use SilverStripe\Core\Config\Config;
+use Sunnysideup\PaymentHirePurchase\HirePurchasePayment;
+use Sunnysideup\Ecommerce\Money\Payment\PaymentResults\EcommercePaymentSuccess;
+use SilverStripe\Forms\LiteralField;
+use SilverStripe\Forms\HiddenField;
+use SilverStripe\Forms\FieldList;
+use Sunnysideup\Ecommerce\Model\Money\EcommercePayment;
+
 
 
 /**
@@ -25,7 +33,7 @@ class HirePurchasePayment extends EcommercePayment
     public function processPayment($data, $form)
     {
         $this->Status = 'Pending';
-        $this->Message = Config::inst()->get("HirePurchasePayment", "custom_message_for_hire_purchase_payment");
+        $this->Message = Config::inst()->get(HirePurchasePayment::class, "custom_message_for_hire_purchase_payment");
         $this->write();
         return EcommercePaymentSuccess::create();
     }
