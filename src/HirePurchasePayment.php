@@ -8,8 +8,8 @@ use SilverStripe\Forms\HiddenField;
 use SilverStripe\Forms\LiteralField;
 use Sunnysideup\Ecommerce\Forms\OrderForm;
 use Sunnysideup\Ecommerce\Model\Money\EcommercePayment;
-use Sunnysideup\Ecommerce\Money\Payment\PaymentResults\EcommercePaymentSuccess;
 use Sunnysideup\Ecommerce\Model\Order;
+use Sunnysideup\Ecommerce\Money\Payment\PaymentResults\EcommercePaymentSuccess;
 
 /**
  * Payment object representing an Hire Purchase Payment (order online and then complete HP application externally).
@@ -31,7 +31,7 @@ class HirePurchasePayment extends EcommercePayment
         return EcommercePaymentSuccess::create();
     }
 
-    public function getPaymentFormFields(?float $amount = 0, ?Order $order = null) : FieldList
+    public function getPaymentFormFields(?float $amount = 0, ?Order $order = null): FieldList
     {
         return new FieldList(
             new LiteralField(
