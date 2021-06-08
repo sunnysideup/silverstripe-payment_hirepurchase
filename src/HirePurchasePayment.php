@@ -4,6 +4,7 @@ namespace Sunnysideup\PaymentHirePurchase;
 
 use SilverStripe\Core\Config\Config;
 use SilverStripe\Forms\FieldList;
+use SilverStripe\Forms\Form;
 use SilverStripe\Forms\HiddenField;
 use SilverStripe\Forms\LiteralField;
 use Sunnysideup\Ecommerce\Forms\OrderForm;
@@ -25,7 +26,7 @@ class HirePurchasePayment extends EcommercePayment
      *
      * @param mixed $data
      */
-    public function processPayment($data, OrderForm $form)
+    public function processPayment($data, Form $form)
     {
         $this->Status = 'Pending';
         $this->Message = Config::inst()->get(HirePurchasePayment::class, 'custom_message_for_hire_purchase_payment');
