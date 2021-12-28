@@ -41,7 +41,7 @@ class HirePurchasePayment extends EcommercePayment
         return new FieldList(
             new LiteralField(
                 'HirePurchasePayment_BeforeMessage',
-                '<div id="HirePurchasePayment_BeforeMessage"><img src="'.$this->Config()->get('logo').'" alt="Online Finance provided by credit capable"></div>'
+                '<div id="HirePurchasePayment_BeforeMessage"><img src="' . $this->Config()->get('logo') . '" alt="Online Finance provided by credit capable"></div>'
             ),
             new HiddenField('HirePurchase', 'HirePurchase', 0)
         );
