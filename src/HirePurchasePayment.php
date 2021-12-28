@@ -39,7 +39,7 @@ class HirePurchasePayment extends EcommercePayment
         return new FieldList(
             new LiteralField(
                 'HirePurchasePayment_BeforeMessage',
-                '<div id="HirePurchasePayment_BeforeMessage"><img src="https://www.creditcapable.co.nz/ccl.png" alt="Online Finance provided by credit capable"></div>'
+                '<div id="HirePurchasePayment_BeforeMessage"><img src="https://www.creditcapable.co.nz/photowarehouse.png" alt="Online Finance provided by credit capable"></div>'
             ),
             new HiddenField('HirePurchase', 'HirePurchase', 0)
         );
