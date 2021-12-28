@@ -27,7 +27,7 @@ class HirePurchasePayment extends EcommercePayment
      */
     public function processPayment($data, Form $form)
     {
-        $this->Status = 'Pending';
+        $this->Status = EcommercePayment::PENDING_STATUS;
         $this->Message = Config::inst()->get(HirePurchasePayment::class, 'custom_message_for_hire_purchase_payment');
         $this->write();
 
