@@ -14,7 +14,6 @@ use Sunnysideup\Ecommerce\Money\Payment\PaymentResults\EcommercePaymentSuccess;
 /**
  * Payment object representing an Hire Purchase Payment (order online and then complete HP application externally).
  *
- * @author Nicolaas [at] sunnysideup.co.nz
  */
 class HirePurchasePayment extends EcommercePayment
 {
